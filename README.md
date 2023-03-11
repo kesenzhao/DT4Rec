@@ -5,7 +5,7 @@ run_dt_simulator.py
 
 run_dt_seq.py
 
-## For baseline DT4Rec-R
+## For baseline 
 run_baseline.py
 
 ## For accuracy task
