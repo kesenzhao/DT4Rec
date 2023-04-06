@@ -200,9 +200,8 @@ class Trainer:
                         return_epochs_mean[str(j)][1]+=return_total[i][str(j)][1]
                 return_score=0
                 for j in range(8):
-                    return_score=return_score+(j-4)*return_epochs_mean[str(j)][0]
+                    return_score=return_score+(j-3.5)*return_epochs_mean[str(j)][0]
                     return_epochs_mean[str(j)][0]/=return_epochs_mean[str(j)][1]
-                print('return_mean is:',return_epochs_mean)
                 print('return_score is:',return_score)
                 return return_epochs_mean
         best_loss = float('inf')
