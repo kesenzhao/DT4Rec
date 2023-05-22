@@ -224,7 +224,7 @@ model_simu.load_state_dict(torch.load(PATH))
 tconf = TrainerConfig(max_epochs=epochs, batch_size=args.batch_size, learning_rate=0.01,
                       lr_decay=False, warmup_tokens=512*20, final_tokens=2*len(train_dataset)*args.context_length*3,
                       num_workers=4, seed=args.seed, model_type=args.model_type, game=args.game, max_timestep=89)
-trainer = Trainer(model, model_simu, train_dataset, test_dataset, tconf)
+trainer = Trainer(model, train_dataset, test_dataset, tconf)
 
 trainer.train()
 
